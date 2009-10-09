@@ -1,4 +1,5 @@
-smilies = [(':(', 'http://fi.somethingawful.com/images/smilies/frown.gif'), 
+smilies = [
+(':(', 'http://fi.somethingawful.com/images/smilies/frown.gif'), 
 (':)', 'http://fi.somethingawful.com/images/smilies/smile.gif'), 
 (':11tea:', 'http://i.somethingawful.com/forumsystem/emoticons/emot-11tea.gif'), 
 (':3:', 'http://i.somethingawful.com/forumsystem/emoticons/emot-3.gif'), 
