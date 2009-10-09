@@ -1,0 +1,18 @@
+This is the SA Emoticon bot.
+
+Currently to update the store of emoticons, it takes a little bit of work.
+First, you would run:
+	python gen-smilies.py > smilies.py
+Then you have to edit gen-smilies to not chop off the whole url and run
+	python gen-smilies.py > assets/emotes/smilies.py
+	python assets/emotes/download.py
+Then, one of the smilies has a ~ in it which google app engine hates, so you
+have to manually rename it, and edit the file name in the root smilies.py
+
+It's a horrible hack and the next project is to make update-smilies.py
+that takes care of all of this.
+
+Also, if someone knows how to use the google data store efficiently to store
+the emoticon names and paths, that would be very nice. When I tried it that way
+every access was taking upwards of 600-1000ms to execute of cpu time which
+sorta goes over your quota very fast.
