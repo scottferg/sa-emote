@@ -1,16 +1,12 @@
 This is the SA Emoticon bot.
 
-Currently to update the store of emoticons, it takes a little bit of work.
-First, you would run:
-	python gen-smilies.py > smilies.py
-Then you have to edit gen-smilies to not chop off the whole url and run
-	python gen-smilies.py > assets/emotes/smilies.py
-	python assets/emotes/download.py
-Then, one of the smilies has a ~ in it which google app engine hates, so you
-have to manually rename it, and edit the file name in the root smilies.py
+To update the list of smilies run:
 
-It's a horrible hack and the next project is to make update-smilies.py
-that takes care of all of this.
+	python update-smilies.py
+
+And to update them and send them up to google with one command run:
+
+	python update-smilies.py -send
 
 Also, if someone knows how to use the google data store efficiently to store
 the emoticon names and paths, that would be very nice. When I tried it that way
