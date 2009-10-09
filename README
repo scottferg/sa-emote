@@ -1,10 +1,16 @@
 This is the SA Emoticon bot.
 
+To install:
+	1. Clone the repo
+	2. Change the application name in app.yaml to your application name
+	3. Update the smilies
+	4. Push to google
+
 To update the list of smilies run:
 
 	python update-smilies.py
 
-And to update them and send them up to google with one command run:
+And to update them and push them up to google with one command run:
 
 	python update-smilies.py -send
 
