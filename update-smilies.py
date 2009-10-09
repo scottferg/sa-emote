@@ -35,12 +35,13 @@ def UpdateSmilies():
 if __name__ == '__main__':
   import sys, os, subprocess
   print 'Updating smilies..'
-  
+  path = os.path.abspath(os.path.dirname(sys.argv[0]))
   UpdateSmilies()
-  if sys.argv[1] == "-send":
-    path = os.path.abspath(os.path.dirname(sys.argv[0]))
+  print '\n############################\n'
+  if len(sys.argv) == 2 and sys.argv[1] == "-send":
+    
     p = subprocess.Popen(['appcfg.py','update',path])
     p.wait()
   else:
-    print 'Smilies updated. Run:\n\tappcfg.py update %s' % path
-    print 'or run python update-smilies.py with the -send flag'  
+    print 'Smilies updated. Run:\n\n\tappcfg.py update %s\n' % path
+    print 'or run python update-smilies.py with the -send flag\n'  
